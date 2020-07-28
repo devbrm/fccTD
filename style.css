@@ -113,7 +113,9 @@ main h1 {
 }
 
 section {
+  margin: 0 auto;
   padding: 2.5rem 1rem;
+  width: 80%;
 }
 
 section header {
@@ -131,10 +133,11 @@ section h2 {
 
 section p {
   margin: 1rem 0;
+  padding: 0 3rem;
 }
 
 section ul {
-  padding: 1rem 3rem;
+  padding: 1rem 6rem;
 }
 
 .code, code {
@@ -146,7 +149,8 @@ section ul {
 }
 
 .code {
-  padding: 1rem;
+  margin: 1rem 5rem;
+  padding: 1rem ;
   border-left: 5px #ffffff solid;
   max-width: 400px;
 }
