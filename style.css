@@ -100,6 +100,8 @@ nav li {
 }
 
 main {
+  margin: 1rem auto;
+  width: 90%;
   grid-column: 1/-1;
 }
 
@@ -113,9 +115,7 @@ main h1 {
 }
 
 section {
-  margin: 0 auto;
   padding: 2.5rem 1rem;
-  width: 80%;
 }
 
 section header {
@@ -176,6 +176,9 @@ section ul {
 @media (max-width: 1024px) {
   html {
     font-size: 90%;
+  }
+  main {
+    width: 95%;
   }
 }
 
