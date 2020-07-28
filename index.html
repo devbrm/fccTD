@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;469;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,531;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,531;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Technical Documentation</title>
+</head>
+<body>
+  <div class="bars"><i class="fas fa-2x fa-bars"></i></div>
+  <nav id="navbar">
+    <header>CSS</header>
+    <ul>
+      <li><a href="#CSS" class="nav-link">CSS</a></li>
+      <li><a href="#Syntax" class="nav-link">Syntax</a></li>
+      <li><a href="#CSS_values_and_units" class="nav-link">CSS values and units</a></li>
+      <li><a href="#Introduction_to_the_CSS_basic_box_model" class="nav-link">Introduction to the CSS basic box model</a></li>
+      <li><a href="#Media_queries" class="nav-link">Media queries</a></li>
+      <li><a href="#Reference" class="nav-link">Reference</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    <h1>CSS: Cascading Style Sheets (CSS)</h1>
+    <section id="CSS" class="main-section">
+      <header>CSS</header>
+      <article>
+        <p><b>Cascading Style Sheets (CSS)</b> is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+        <p>CSS is one of the core languages of the open Web and is standardized across Web browsers according to the <a href="https://www.w3.org/Style/CSS/#specs"> W3C specification</a>. Previously development of various parts of CSS specification was done synchronously, which allowed versioning of the latest recommendation. You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.</p>
+        <p>From CSS3, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification.</p>
+      </article>
+    </section>
+    <section id="Syntax" class="main-section">
+      <header>Syntax</header>
+      <article>
+
+        <p>The basic goal of the Cascading Stylesheet (CSS) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The CSS syntax reflects this goal and its basic building blocks are:</p>
+        <ul>
+          <li>The <b>property</b> which is an identifier, that is a human-readable name, that defines which feature is considered.</li>
+          <li>The <b>value</b> which describe how the feature must be handled by the engine. Each property has a set of valid values, defined by a formal grammar, as well as a semantic meaning, implemented by the browser engine.</li>
+        </ul>
+
+      </article>
+      <article>
+
+        <h2>CSS declarations</h2>
+        <p>Setting CSS properties to specific values is the core function of the CSS language. A property and value pair is called a declaration, and any CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out, and to style it.</p>
+        
+        <p>Both properties and values are case-insensitive by default in CSS. The pair is separated by a colon, ':' (U+003A COLON), and white spaces before, between, and after properties and values, but not necessarily inside, are ignored.</p>
+        <code>property_name: value;</code>
+        <h2>CSS declaration blocks</h2>
+        <p>Declarations are grouped in blocks, that is in a structure delimited by an opening brace, '{' (U+007B LEFT CURLY BRACKET), and a closing one, '}' (U+007D RIGHT CURLY BRACKET). Blocks sometimes can be nested, so opening and closing braces must be matched.</p>
+        
+        <p>Such blocks are naturally called declaration blocks and declarations inside them are separated by a semi-colon, ';' (U+003B SEMICOLON). A declaration block may be empty, that is containing null declaration. White spaces around declarations are ignored. The last declaration of a block doesn't need to be terminated by a semi-colon, though it is often considered good style to do it as it prevents forgetting to add it when extending the block with another declaration.</p>
+        <div class="code">
+          <code>div {<br>
+            &ThinSpace; border: red 1px solid;&NewLine;<br>
+            &ThinSpace; color: #fff;<br>
+            &ThinSpace; font-size: 3rem;<br>
+          };
+        </code>
+        </div>
+      </article>
+
+    </section>
+    <section id="CSS_values_and_units" class="main-section">
+      <header>CSS values and units</header>
+      <article>
+        <p>Every CSS declaration includes a property / value pair. Depending on the property, the value can include a single integer or keyword, to a series of keywords and values with or without units. There are a common set of data types -- values and units -- that CSS properties accept. Below is an overview of most of these data types. Refer to the page for each value type for more detailed information.</p>
+        <h2>Textual data types</h2>
+        <ul>
+          <li><code>&lt;custom-ident&gt;</code></li>
+          <li>Pre-defined keywords as an <code>&lt;ident&gt;</code></li>
+          <li><code>&lt;string&gt;</code></li>
+          <li><code>&lt;url&gt;</code></li>
+        </ul>
+        <p>Text data types are either &lt;string&gt;, a quoted series of characters, or an &lt;ident&gt;, a "CSS Identifier" which is an unquoted string. A &lt;string&gt; must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as &lt;ident&gt; or &lt;custom-ident&gt;, must be unquoted.</p>
+        <div class="code">
+          <code>@keyframe validIdent { <br>
+            &ThinSpace; /* keyframes go here */<br>
+          }<br>
+          @keyframe 'validString' { <br>
+            &ThinSpace; /* keyframes go here */ <br>
+          }</code>
+        </div>
+      </article>
+      <article>
+        <h2>Pre-defined keyword values</h2>
+        <p>Pre-defined keywords are text values defined by the specification for that property. These keywords are also CSS Identifiers and are therefore used without quotes.</p>
+        <p>When viewing CSS property value syntax in a CSS specification or the MDN property page, allowable keywords will be listed in the following form. The following values are the pre-defined keyword values allowed for <code>float</code>.</p>
+        <div class="code">
+          left | right | none | inline-start | inline-end
+        </div>
+        <p>Such values are used without quotes:</p>
+        <div class="code">
+          <code>
+            .box { <br>
+              &ThinSpace; float: left; <br>
+          }
+          </code>
+        </div>
+
+      </article>
+    </section>
+    <section id="Introduction_to_the_CSS_basic_box_model" class="main-section">
+      <header>Introduction to the CSS basic box model</header>
+      <article>
+
+        <p>When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard <b>CSS basic box model</b>. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.</p>
+        <p>Every box is composed of four parts (or areas), defined by their respective edges: the <em>content edge, padding edge, border edge, and margin edge</em>.</p>
+
+        <h2>Content Area</h2>
+        <p>The <b>content area</b>, bounded by the content edge, contains the "real" content of the element, such as text, an image, or a video player. Its dimensions are the content width (or content-box width) and the content height (or content-box height). It often has a background color or background image.</p>
+        <p>If the <code>box-sizing</code> property is set to content-box (default) and if the element is a block element, the content area's size can be explicitly defined with the <code>width</code>, <code>min-width</code>, <code>max-width</code>, <code>height</code>, <code>min-height</code>, <code>max-height</code> properties.</p>
+
+        <h2>Padding Area</h2>
+        <p>The <b>padding area</b>, bounded by the padding edge, extends the content area to include the element's padding. Its dimensions are the padding-box width and the padding-box height.</p>
+        <p>The thickness of the padding is determined by the <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, <code>padding-left</code>, and shorthand padding properties.</p>
+        <div class="code">
+          <code>
+            h2 { <br>
+              &ThinSpace; padding-left: 30px; <br>
+              &ThinSpace; padding-top: 4em; <br>
+              &ThinSpace; padding-bottom: auto; <br>
+            }
+          </code>
+        </div>
+
+        <h2>Border Area</h2>
+        <p>The <b>border area</b>, bounded by the border edge, extends the padding area to include the element's borders. Its dimensions are the border-box width and the border-box height.</p>
+        <p>The thickness of the borders are determined by the <code>border-width</code> and shorthand <code>border</code> properties. If the <code>box-sizing</code> property is set to <code>border-box</code>, the border area's size can be explicitly defined with the <code>width</code>, <code>min-width</code>, <code>max-width</code>, <code>height</code>, <code>min-height</code>, and <code>max-height</code> properties. When there is a background (<code>background-color</code> or <code>background-image</code>) set on a box, it extends to the outer edge of the border (i.e. extends underneath the border in z-ordering). This default behavior can be altered with the <code>background-clip</code> css property.</p>
+        <div class="code">
+          <code>
+            div { <br>
+              &ThinSpace; border-left: 3px gold solid ; <br>
+              &ThinSpace; border: 1px solid black; <br>
+            }
+          </code>
+        </div>
+
+        <h2>Margin Area</h2>
+        <p>The <b>margin area</b>, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the margin-box width and the margin-box height.</p>
+        <p>The size of the margin area is determined by the <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>, and shorthand <code>margin</code> properties. When margin collapsing occurs, the margin area is not clearly defined since margins are shared between boxes.</p>
+        <p>Finally, note that for non-replaced inline elements, the amount of space taken up (the contribution to the height of the line) is determined by the <code>line-height</code> property, even though the borders and padding are still displayed around the content.
+        </p>
+        <div class="code">
+          <code>
+            section { <br>
+              &ThinSpace; margin: 1rem ; <br>
+              &ThinSpace; margin-top: 3rem ; <br>
+            }
+          </code>
+        </div>
+
+        
+      </article>
+    </section>
+    <section id="Media_queries" class="main-section">
+      <header>Media queries</header>
+      <article>
+
+        <p><b>Media queries</b> let you adapt your site or app depending on the presence or value of various device characteristics and parameters.</p>
+        <p>They are a key component of responsive design. For example, a media query can shrink the font size on small devices, increase the padding between paragraphs when a page is viewed in portrait mode, or bump up the size of buttons on touchscreens.</p>
+        <p>In CSS, use the <code>@media</code> at-rule to conditionally apply part of a style sheet based on the result of a media query. Use <code>@import</code> to conditionally apply an entire style sheet.</p>
+
+      </article>
+      <article>
+
+        <h2>Media queries in HTML</h2>
+        <p>In HTML, media queries can be applied to various elements:</p>
+        <ul>
+          <li>In the &lt;link&gt; element's <b>media</b> attribute, they define the media to which a linked resource (typically CSS) should be applied.</li>
+          <li>In the &lt;source&gt; element's media attribute, they define the media to which that source should be applied. (This is only valid inside &lt;picture&gt; elements.)</li>
+          <li>In the &lt;style&gt; element's media attribute, they define the media to which the style should be applied.
+          </li>
+        </ul>
+
+      </article>
+    </section>
+    <section id="Reference" class="main-section">
+      <header>Reference</header>
+      <p>All of the Documentation in this was taken from the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" alt="mdn link">Mozilla Developer Network Documentation</a> </p>
+    </section>
+  </main>
+
+  <script>
+
+    const main = document.querySelector("#main-doc")
+    const navbar = document.querySelector("#navbar")
+    const bars = document.querySelector(".fas")
+
+    function toggleClass() {
+      navbar.classList.toggle("showMenu")
+    }
+
+    bars.addEventListener("click", toggleClass)
+    window.addEventListener("click", (e) => {
+
+      let x = e.target;
+      if(   e.target === bars
+        ||  x === navbar
+        ||  x.parentElement === navbar
+        ||  x.parentElement.parentElement === navbar
+        ||  x.parentElement.parentElement.parentElement === navbar
+        ) return;
+
+      else if(e.target !== navbar ) navbar.classList.remove("showMenu")
+      
+    })
+    
+  </script>
+
+  </body>
+  </html>
